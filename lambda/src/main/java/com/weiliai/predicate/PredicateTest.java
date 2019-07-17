@@ -29,8 +29,13 @@ public class PredicateTest {
         System.out.println("=================================");
         test.conditionFilter(list,integer -> true);
         System.out.println("=================================");
-
-
+        test.conditionFilter2(list,integer -> integer>5,integer -> integer % 2==0);
+        System.out.println("=================================");
+        test.conditionFilter3(list,integer -> integer>5,integer -> integer % 2==0);
+        System.out.println("===============有惊喜============");
+        test.conditionFilter4(list,integer -> integer>5,integer -> integer % 2 ==0);
+        System.out.println("===============有惊喜============");
+        System.out.println(test.isEqual("test").test("test"));
     }
 
     public void conditionFilter(List<Integer> list,Predicate<Integer> predicate){
@@ -40,6 +45,38 @@ public class PredicateTest {
             }
         }
     }
+
+    // &&且
+    public void conditionFilter2(List<Integer> list,Predicate<Integer> predicate,Predicate<Integer> predicate2){
+        for (Integer integer : list) {
+            if(predicate.and(predicate2).test(integer)){
+                System.out.println(integer);
+            }
+        }
+    }
+
+
+    // ||或
+    public void conditionFilter3(List<Integer> list,Predicate<Integer> predicate,Predicate<Integer> predicate2){
+        for (Integer integer : list) {
+            if(predicate.or(predicate2).test(integer)){
+                System.out.println(integer);
+            }
+        }
+    }
+
+    public void conditionFilter4(List<Integer> list,Predicate<Integer> predicate,Predicate<Integer> predicate2){
+        for (Integer integer : list) {
+            if(predicate.and(predicate2).negate().test(integer)){
+                System.out.println(integer);
+            }
+        }
+    }
+
+    public Predicate<String> isEqual(Object object){
+        return Predicate.isEqual(object);
+    }
+
 
     public void findAllEvens(List<Integer> list){
         for (Integer integer : list) {

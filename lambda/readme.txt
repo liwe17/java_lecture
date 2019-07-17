@@ -11,7 +11,7 @@ or closures,following the usage of lambda calculus;
     3>如果某个接口只有一个抽象方法,但我们并没有给该接口声明@FuncationalInterface注解,那么编译器依旧会将该接口看作函数式接口.
     4>如果该接口有Object的方法,并且除Object的方法外只有一个抽象方法,那么它仍然是一个函数式接口.
 
-4.Lambda表达式的作用:
+4.Lambda表达式:
     1>Lambda表达式为Java添加缺失的函数式编程特性,使我们将函数当作一等公民看待.
     2>在将函数作为一等公民的的语言中(javascript),Lambda表达式的类型是函数,但在Java中,Lambda表达式是对象,他们必须依附于一类特
     别的对象类型--函数式接口(FunctionalInterface).
@@ -27,3 +27,9 @@ or closures,following the usage of lambda calculus;
         (String s)->{System.out.println(s);}
         ()->42
         ()->{return 3.1415}
+
+6.Lambda表达式作用:
+    1>传递行为,而不仅仅是值
+    2>提升抽象层次
+    3>API重用性更好
+    4>更加灵活
