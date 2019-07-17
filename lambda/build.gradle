@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'com.weiliai'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+tasks.withType(JavaCompile){
+    options.encoding = "UTF-8"
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.projectlombok:lombok:1.18.8'
+    implementation 'com.google.guava:guava:28.0-jre'
+}
