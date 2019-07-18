@@ -17,6 +17,9 @@ tasks.withType(JavaCompile){
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    implementation 'org.projectlombok:lombok:1.18.8'
     implementation 'com.google.guava:guava:28.0-jre'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.8'
+    compileOnly 'org.projectlombok:lombok:1.18.8'
+    testCompileOnly 'org.projectlombok:lombok:1.18.8'
 }
