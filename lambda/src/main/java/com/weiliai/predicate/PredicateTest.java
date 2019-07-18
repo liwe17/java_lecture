@@ -34,7 +34,7 @@ public class PredicateTest {
         test.conditionFilter3(list,integer -> integer>5,integer -> integer % 2==0);
         System.out.println("===============有惊喜============");
         test.conditionFilter4(list,integer -> integer>5,integer -> integer % 2 ==0);
-        System.out.println("===============有惊喜============");
+        System.out.println("=================================");
         System.out.println(test.isEqual("test").test("test"));
     }
 

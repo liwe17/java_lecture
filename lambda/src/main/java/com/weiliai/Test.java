@@ -19,6 +19,7 @@ public class Test {
         MyInterface2 my2 =()->{};
         System.out.println(my2.getClass().getInterfaces()[0]);
 
+        //快速启动一个线程
         new Thread(()->{System.out.println("Hello world");},"thread1").start();
 
         List<String> list = Arrays.asList("hello","world","hello world");
@@ -38,11 +39,11 @@ public class Test {
         list.stream().map(String::toUpperCase).forEach(e-> list2.add(e));
         list2.forEach(e-> System.out.println(e));
 
+        //方法引用
         Function<String,String> function = String::toUpperCase;
         System.out.println(function.getClass().getInterfaces()[0]);
-
-
         System.out.println("==========================================");
+        //方法引用
         List<String> names =  Arrays.asList("zhangsan","lisi","wangwu","zhaoliu");
         Collections.sort(names, new Comparator<String>() {
             @Override

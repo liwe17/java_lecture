@@ -22,10 +22,12 @@ public class BiFunctionTest {
 
     }
 
+    // biFunction提供T, U, R,返回R
     public int compute(int a, int b, BiFunction<Integer,Integer,Integer> biFunction){
         return biFunction.apply(a,b);
     }
 
+    //先执行biFunction,再执行function
     public int compute2(int a, int b, BiFunction<Integer,Integer,Integer> biFunction, Function<Integer,Integer> function){
         return biFunction.andThen(function).apply(a,b);
     }

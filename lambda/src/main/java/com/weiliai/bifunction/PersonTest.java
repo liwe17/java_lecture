@@ -30,10 +30,12 @@ public class PersonTest {
 
     }
 
+    //自己实现
     public List<Person> getPersonsByUserName(String username,List<Person> persons){
         return persons.stream().filter(person -> person.getName().equals(username)).collect(Collectors.toList());
     }
 
+    //通过函数实现
     public List<Person> getPersonsByAge(int age,List<Person> persons) {
         /*
         BiFunction<Integer, List<Person>, List<Person>> biFunction2 = (ageofPerson, personList) -> {
@@ -44,6 +46,7 @@ public class PersonTest {
         return biFunction.apply(age,persons);
     }
 
+    //根据传入的函数的实现
     public List<Person> getPersonsByAge2(int age,List<Person> persons,BiFunction<Integer,List<Person>,List<Person>> biFunction) {
         return biFunction.apply(age,persons);
     }
