@@ -1,8 +1,9 @@
 package com.weiliai.bifunction;
 
 /**
- * @author:Dog Li
- * @Date: 2019/7/17
+ * @author: Doug Li
+ * @Date: 2019/7/22
+ * @Describe:
  */
 public class Person {
 

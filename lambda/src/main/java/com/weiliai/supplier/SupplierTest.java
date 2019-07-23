@@ -3,8 +3,9 @@ package com.weiliai.supplier;
 import java.util.function.Supplier;
 
 /**
- * @author: Dog Li
- * @Date: 2019/7/18
+ * @author: Doug Li
+ * @Date: 2019/7/22
+ * @Describe:
  */
 public class SupplierTest {
 

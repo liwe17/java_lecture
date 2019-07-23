@@ -5,8 +5,9 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 /**
- * @author: Dog Li
- * @Date: 2019/7/18
+ * @author: Doug Li
+ * @Date: 2019/7/22
+ * @Describe:
  */
 @Data
 @NoArgsConstructor

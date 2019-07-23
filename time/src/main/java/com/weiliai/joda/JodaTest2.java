@@ -7,8 +7,9 @@ import org.joda.time.format.DateTimeFormat;
 import java.util.Date;
 
 /**
- * @author: Dog Li
- * @Date: 2019/7/20
+ * @author: Doug Li
+ * @Date: 2019/7/22
+ * @Describe:
  */
 public class JodaTest2 {
 
@@ -49,6 +50,7 @@ public class JodaTest2 {
     public static void main(String[] args) {
         System.out.println(JodaTest2.convertUTC2Date("2018-11-11T09:00:00.996Z"));
         System.out.println(JodaTest2.convertDate2UTC(new Date()));
+        System.out.println(JodaTest2.convertDate2LocalByDateFormat(new Date(),"yyyy=MM-dd HH:mm:ss"));
         System.out.println(JodaTest2.convertDate2LocalByDateFormat(new Date(),"yyyy=MM-dd HH:mm:ss"));
     }
 

@@ -4,8 +4,9 @@ import java.util.Comparator;
 import java.util.function.BinaryOperator;
 
 /**
- * @author: Dog Li
- * @Date: 2019/7/18
+ * @author: Doug Li
+ * @Date: 2019/7/22
+ * @Describe:
  */
 public class BinaryOperatorTest {
 
