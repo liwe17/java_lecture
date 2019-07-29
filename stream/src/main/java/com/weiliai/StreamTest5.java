@@ -7,7 +7,7 @@ import java.util.stream.IntStream;
 /**
  * @author: Doug Li
  * @Date: 2019/7/29
- * @Describe:
+ * @Describe:流中使用的注意死循环
  */
 public class StreamTest5 {
 

@@ -21,8 +21,9 @@ public class StreamTest3 {
         System.out.println(list2.stream().map(e -> e * e).reduce(Integer::sum).orElse(0));
 
         Stream<List<Integer>> list3 = Stream.of(Arrays.asList(1), Arrays.asList(2, 3), Arrays.asList(4, 5, 6));
-        list3.flatMap(theList->theList.stream().map(e->e*e)).forEach(System.out::println);
-
+        System.err.println("============================");
+//        list3.flatMap(theList->theList.stream().map(e->e*e)).forEach(System.out::println);
+        list3.map(item->item.stream().map(e->e*e).collect(Collectors.toList())).flatMap(e->e.stream()).forEach(System.out::println);
 
     }
 
