@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 /**
  * @author: Doug Li
  * @Date: 2019/7/22
- * @Describe:
+ * @Describe:初步了解
  */
 public class StreamTest {
 
@@ -28,11 +28,9 @@ public class StreamTest {
         IntStream.range(3,8).forEach(System.out::println);
         IntStream.rangeClosed(3,8).forEach(System.out::println);
         System.out.println("==============华丽的分割线===================");
-        //
         List<Integer> intList = Arrays.asList(1, 2, 3, 4, 5, 6);
         intList.forEach(System.out::println);
         System.err.println(intList.stream().map(e -> e * 2).reduce(0, Integer::sum));
-
     }
 
 }
